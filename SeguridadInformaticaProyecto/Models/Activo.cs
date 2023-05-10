@@ -24,8 +24,8 @@ namespace SeguridadInformaticaProyecto.Models
 
     public enum Riesgo
     {
-        Alto = 1,
+        Alto = 3,
         Medio = 2,
-        Bajo = 3
+        Bajo = 1
     }
 }

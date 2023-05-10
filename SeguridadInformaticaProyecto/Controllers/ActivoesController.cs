@@ -60,6 +60,11 @@ namespace SeguridadInformaticaProyecto.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Calcular el valor del activo
+                activo.valor = (int)Enum.Parse(typeof(Riesgo), activo.confidencialidad)
+                             + (int)Enum.Parse(typeof(Riesgo), activo.integridad)
+                             + (int)Enum.Parse(typeof(Riesgo), activo.disponibilidad);
+
                 _context.Add(activo);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -97,6 +102,11 @@ namespace SeguridadInformaticaProyecto.Controllers
 
             if (ModelState.IsValid)
             {
+                // Calcular el valor del activo
+                activo.valor = (int)Enum.Parse(typeof(Riesgo), activo.confidencialidad)
+                             + (int)Enum.Parse(typeof(Riesgo), activo.integridad)
+                             + (int)Enum.Parse(typeof(Riesgo), activo.disponibilidad);
+
                 try
                 {
                     _context.Update(activo);
