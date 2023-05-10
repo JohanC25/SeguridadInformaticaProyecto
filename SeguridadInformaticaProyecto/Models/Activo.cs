@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace SeguridadInformaticaProyecto.Models
 {
@@ -6,19 +8,27 @@ namespace SeguridadInformaticaProyecto.Models
     {
         public int id { get; set; }
         [DisplayName("Nombre Activo")]
-        public string nombre { get; set;}
+        public string nombre { get; set; }
         [DisplayName("Categoria Activo")]
-        public string categoria { get; set;}
+        public string categoria { get; set; }
         [DisplayName("Subcategoria Activo")]
-        public string subcat { get; set;}
+        public string subcat { get; set; }
         [DisplayName("Confidencialidad Activo")]
-        public string confidencialidad { get; set;}
+        public string confidencialidad { get; set; }
         [DisplayName("Integridad Activo")]
-        public string integridad { get; set;}
+        public string integridad { get; set; }
         [DisplayName("Disponibilidad Activo")]
-        public string disponibilidad { get; set;}
+        public string disponibilidad { get; set; }
         [DisplayName("Valor Activo")]
-        public int valor { get; set;}   
+        public int valor { get; set; }
+
+        public static List<string> Categorias { get; set; } = new List<string> { "Software", "Hardware" };
+
+        public Activo()
+        {
+            categoria = Categorias[0];
+        }
+
 
     }
 
@@ -29,3 +39,4 @@ namespace SeguridadInformaticaProyecto.Models
         Bajo = 1
     }
 }
+

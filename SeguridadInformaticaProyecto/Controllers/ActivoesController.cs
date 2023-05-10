@@ -48,6 +48,7 @@ namespace SeguridadInformaticaProyecto.Controllers
         // GET: Activoes/Create
         public IActionResult Create()
         {
+            ViewBag.Categorias = new SelectList(Activo.Categorias);
             return View();
         }
 
@@ -69,6 +70,8 @@ namespace SeguridadInformaticaProyecto.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+            ViewBag.Categorias = new SelectList(Activo.Categorias);
             return View(activo);
         }
 
@@ -85,6 +88,8 @@ namespace SeguridadInformaticaProyecto.Controllers
             {
                 return NotFound();
             }
+
+            ViewBag.Categorias = new SelectList(Activo.Categorias);
             return View(activo);
         }
 
@@ -125,6 +130,8 @@ namespace SeguridadInformaticaProyecto.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+
+            ViewBag.Categorias = new SelectList(Activo.Categorias);
             return View(activo);
         }
 
