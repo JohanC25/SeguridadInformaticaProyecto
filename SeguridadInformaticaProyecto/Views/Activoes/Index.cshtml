@@ -13,6 +13,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.nombre)
             </th>
             <th>
@@ -31,6 +34,24 @@
                 @Html.DisplayNameFor(model => model.disponibilidad)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.departamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.clas_conf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.clas_int)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.clas_disp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.evaluacion)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.valor)
             </th>
             <th></th>
@@ -39,6 +60,9 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                A-@Html.DisplayFor(modelItem => item.id)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.nombre)
             </td>
@@ -57,6 +81,24 @@
             <td>
                 @Html.DisplayFor(modelItem => item.disponibilidad)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.departamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.clas_conf)
+             </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.clas_int)
+             </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.clas_disp)
+             </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.evaluacion)
+             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.valor)
             </td>

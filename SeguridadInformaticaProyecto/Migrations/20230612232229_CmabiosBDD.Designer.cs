@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SeguridadInformaticaProyecto.Data;
 
@@ -10,9 +11,10 @@ using SeguridadInformaticaProyecto.Data;
 namespace SeguridadInformaticaProyecto.Migrations
 {
     [DbContext(typeof(SeguridadInformaticaProyectoContext))]
-    partial class SeguridadInformaticaProyectoContextModelSnapshot : ModelSnapshot
+    [Migration("20230612232229_CmabiosBDD")]
+    partial class CmabiosBDD
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,17 +38,14 @@ namespace SeguridadInformaticaProyecto.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("clas_conf")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("clas_conf")
+                        .HasColumnType("int");
 
-                    b.Property<string>("clas_disp")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("clas_disp")
+                        .HasColumnType("int");
 
-                    b.Property<string>("clas_int")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("clas_int")
+                        .HasColumnType("int");
 
                     b.Property<string>("confidencialidad")
                         .IsRequired()
@@ -60,9 +59,8 @@ namespace SeguridadInformaticaProyecto.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("evaluacion")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("evaluacion")
+                        .HasColumnType("int");
 
                     b.Property<string>("integridad")
                         .IsRequired()

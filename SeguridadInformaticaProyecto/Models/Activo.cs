@@ -6,6 +6,7 @@ namespace SeguridadInformaticaProyecto.Models
 {
     public class Activo
     {
+        [DisplayName("Código Interno")]
         public int id { get; set; }
         [DisplayName("Nombre Activo")]
         public string nombre { get; set; }
@@ -19,6 +20,18 @@ namespace SeguridadInformaticaProyecto.Models
         public string integridad { get; set; }
         [DisplayName("Disponibilidad Activo")]
         public string disponibilidad { get; set; }
+		[DisplayName("Departamento")]
+		public string departamento { get; set; }
+		[DisplayName("Cantidad")]
+		public int cantidad { get; set; }
+        [DisplayName("Clasificación Confidencialidad")]
+        public string clas_conf { get; set; }
+        [DisplayName("Clasificación Integridad")]
+        public string clas_int { get; set; }
+        [DisplayName("Clasificación Disponibilidad")]
+        public string clas_disp { get; set; }
+        [DisplayName("Evaluación Clasifiación")]
+        public string evaluacion { get; set; }
         [DisplayName("Valor Activo")]
         public int valor { get; set; }
 
